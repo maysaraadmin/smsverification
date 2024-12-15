@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XMLDB PATH="local/smsverification/db" VERSION="1.0" COMMENT="SMS Verification">
+    <TABLES>
+        <TABLE NAME="local_smsverification" COMMENT="Stores OTPs for verification">
+            <FIELDS>
+                <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true" COMMENT="Primary Key"/>
+                <FIELD NAME="userid" TYPE="int" LENGTH="10" NOTNULL="true" COMMENT="User ID"/>
+                <FIELD NAME="otp" TYPE="char" LENGTH="6" NOTNULL="true" COMMENT="OTP"/>
+                <FIELD NAME="expiry" TYPE="int" LENGTH="10" NOTNULL="true" COMMENT="Expiration timestamp"/>
+            </FIELDS>
+            <KEYS>
+                <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+            </KEYS>
+        </TABLE>
+    </TABLES>
+</XMLDB>
